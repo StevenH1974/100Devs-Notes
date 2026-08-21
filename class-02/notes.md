@@ -26,7 +26,7 @@ The minimal essential markup required for a valid HTML document:
   </body>
 </html>
 
-Essential CSS Terminology & Rulesets:
+## Essential CSS Terminology & Rulesets:
     **Rule Set: Consists of a selector followed by a declaration block inside {}.
 
     **Selector: Designates which HTML element(s) to target.
@@ -40,18 +40,42 @@ Essential CSS Terminology & Rulesets:
 
         **ID Selector (e.g., #header): Targets a single, unique element per page using the id attribute.
 
-Project Organization & Linking
+## Project Organization & Linking
     **External stylesheets are linked inside the <head> using <link rel="stylesheet" href="path/to/file.css">.
 
     **CSS Reset: A stylesheet technique used to reduce browser inconsistencies by neutralizing default browser margins, padding, and font sizes.
 Source: Shay Howe — Learn to Code HTML & CSS (Lesson 1)
 
 
+## 📖 Shay Howe: Lesson 2 Notes — Getting to Know HTML
+
+### Block vs. Inline Element Rules
+- **Block-Level:** Begins on a new line, stacks vertically, and occupies the full available width. Can contain other block elements or inline elements.
+- **Inline-Level:** Stays in normal document flow without breaking onto a new line, occupying only its content's width. Can wrap other inline elements, **cannot** wrap block-level elements.
+
+### Text-Formatting Semantics: Importance vs. Style
+- **`<strong>` vs `<b>`:**
+  - `<strong>`: Represents *strong importance* or urgency (preferred semantic tag for bolding).
+  - `<b>`: Represents *stylistically offset* text without adding semantic importance.
+- **`<em>` vs `<i>`:**
+  - `<em>`: Represents *stressed emphasis* (preferred semantic tag for italics).
+  - `<i>`: Represents text in an *alternative voice, tone, or technical term*.
+
+### Document Structural & Layout Tags
+- **`<header>`:** Used inside the `<body>` for introductory content, page headers, or section headings (not to be confused with the metadata `<head>` tag)[cite: 2].
+- **`<nav>`:** Contains major primary navigation links (e.g., site-wide menus, tables of contents)[cite: 2].
+- **`<article>` vs `<section>`:** Used for document outlining; use `<div>` if grouping strictly for CSS styling[cite: 2].
+- **`<aside>`:** Holds tangentially related content outside the main flow, such as sidebars, author bios, or callout boxes[cite: 2].
+
+---
+*Source: [Shay Howe — Learn to Code HTML & CSS (Lesson 2)](https://learn.shayhowe.com/html-css/getting-to-know-html/)*[cite: 2]
 
 
 
 
-Anki Flashcards created from this class:
+
+
+# Anki Flashcards created from this class:
 
 Front: What is the main structural difference between `<div>` and `<span>`?
 `<div>` is a block-level generic container (takes up the full line width), while `<span>` is an inline generic container (only takes up as much width as its content).
@@ -88,3 +112,20 @@ Here are 5 high-yield cards built directly from your notes covering CSS anatomy,
 
 5. **Front:** What is the primary purpose of a "CSS Reset"?
    **Back:** It wipes out default browser styles (margins, padding, font defaults) so the web page renders consistently across all different browsers.
+
+   ## Todays 5 Anki Flashcards (Lesson 2 Focused)
+
+1. Front: What is the rule regarding nesting block-level elements inside inline-level elements?
+Back: Inline-level elements cannot wrap block-level elements; they can only wrap other inline elements.
+
+2. Front: What is the semantic difference between <strong> and <b>?
+Back: <strong> indicates strong importance/urgency[cite: 2], while <b> is used strictly to stylistically offset text without adding importance.
+
+3. Front: What is the semantic difference between <em> and <i>?
+Back: <em> indicates stressed emphasis[cite: 2], while <i> represents text spoken in an alternative voice, tone, or technical term[cite: 2].
+
+4. Front: What is the primary semantic purpose of the <aside> element?
+Back: It holds tangentially related content separate from the main flow, such as sidebars, author details, or callout boxes.
+
+5. Front: When should you use a <div> instead of structural semantic tags like <article> or <section>?
+Back: Use a <div> when content is being grouped purely for CSS styling or layout purposes, without adding meaning to the document outline.
