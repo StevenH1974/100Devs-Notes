@@ -129,3 +129,19 @@ Back: It holds tangentially related content separate from the main flow, such as
 
 5. Front: When should you use a <div> instead of structural semantic tags like <article> or <section>?
 Back: Use a <div> when content is being grouped purely for CSS styling or layout purposes, without adding meaning to the document outline.
+
+  ## 🗂️ Additional Flashcards Log (Saturday Review)
+1. Front: What is the difference between a relative URL and an absolute URL when linking files/pages?
+Back: An absolute URL contains the complete internet address (e.g., [https://example.com/page](https://example.com/page)), while a relative URL points to a file within the same website/directory structure (e.g., assets/stylesheets/main.css).
+
+2. Front: What is the primary purpose of the HTML <main> tag?
+Back: It specifies the dominant, unique content of the body of a document. A page should only contain one element, excluding repeating content like sidebars, navbars, footer.
+
+3. Front: What does the <time> tag do, and why use its datetime attribute?
+Back: It represents a specific period in time or date. The datetime attribute formats the date in a machine-readable format for search engines and calendar apps.
+
+4. Front: What is the purpose of the <meta charset="UTF-8"> tag insde the head tag?
+Back: It tells the browser which character encoding standard to use (UTF-8), ensuring almost all human languages and special characters display correctly without breaking. 
+
+5. Front: In basic CSS terminology, what is the difference between a property and a value?
+Back: A property is the style feature being modified (color, font, etc), while a value is the specific setting applied to the property (orange, 16px, etc). 
