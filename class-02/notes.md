@@ -70,6 +70,25 @@ Source: Shay Howe — Learn to Code HTML & CSS (Lesson 1)
 ---
 *Source: [Shay Howe — Learn to Code HTML & CSS (Lesson 2)](https://learn.shayhowe.com/html-css/getting-to-know-html/)*[cite: 2]
 
+## 📖 Shay Howe: Lesson 3 Notes — Getting to Know CSS
+
+### The Cascade & Specificity
+- **The Cascade:** CSS rules read and execute from top to bottom. If two competing rules have equal specificity, the rule declared lowest in the stylesheet wins.
+- **Inheritance:** Certain properties (like `color` and `font-family`) applied to a parent element cascade down to its child elements automatically.
+- **Specificity Hierarchy:** Determines which rule wins when selectors compete:
+  1. Inline styles (highest specificity)
+  2. ID selectors (`#header`)
+  3. Class, pseudo-class, and attribute selectors (`.btn`, `:hover`)
+  4. Type/element selectors (`p`, `div`) (lowest specificity)
+
+### Properties & Values
+- **Colors:** Can be defined via keywords (`red`), Hex codes (`#ffffff`), RGB (`rgb(255, 0, 0)`), or HSL (`hsl(0, 100%, 50%)`).
+- **Units of Measurement:**
+  - *Absolute Units:* `px` (pixels) — fixed sizing that does not alter based on other elements.
+  - *Relative Units:* `em` (relative to parent font size), `rem` (relative to root `<html>` font size), `%` (percentage of parent container).
+
+---
+*Source: [Shay Howe — Learn to Code HTML & CSS (Lesson 3)](https://learn.shayhowe.com/html-css/getting-to-know-css/)*
 
 
 
@@ -145,3 +164,14 @@ Back: It tells the browser which character encoding standard to use (UTF-8), ens
 
 5. Front: In basic CSS terminology, what is the difference between a property and a value?
 Back: A property is the style feature being modified (color, font, etc), while a value is the specific setting applied to the property (orange, 16px, etc). 
+
+
+## Additional flashcard log (Monday)
+1. Front: What is "The Cascade" in CSS?
+Back: The process by which CSS applies styles from top to bottom. When conflicting declaration have equal specificity, the rule appearing lowest in te document or stylesheet takes precedence.
+
+2. Front: What is the basic order of CSS specifity from lowest to highest?
+Back: Type/element selectors -> class/attribute selectors -> ID selectors -> Inline styles.
+
+3. Front: In CSS, what is the difference between em and rem relative units?
+Back: em is relative to the font-size of its direct parent element, while rem (root em) is relative to the font-size of the root element. 
