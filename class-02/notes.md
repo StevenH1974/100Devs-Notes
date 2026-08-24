@@ -140,6 +140,29 @@ Every element on a web page is rendered as a rectangular box consisting of four 
 }
 
 
+## 📖 Shay Howe: Lesson 6 Notes — Working with Typography
+
+### Core Text Styling Properties
+- **`color`:** Defines text color using keywords, Hex, RGB, or HSL.
+- **`font-family`:** Declares font choices using a **font stack** (e.g., `font-family: "Helvetica Neue", Arial, sans-serif;`). The browser uses the first available font on the user's system, falling back to a generic family (`sans-serif`, `serif`, `monospace`).
+- **`font-size`:** Sets the size of the font using absolute units (`px`) or relative units (`rem`, `em`, `%`).
+- **`font-style`:** Controls font slant (`normal`, `italic`, `oblique`).
+- **`font-weight`:** Sets stroke thickness using keywords (`normal`, `bold`) or numeric values (`100` to `900`, where `400` is normal and `700` is bold).
+- **`font-variant`:** Used primarily for stylistic variants like small caps (`font-variant: small-caps;`).
+
+### Text Layout & Spacing Properties
+- **`line-height`:** Sets the vertical space between lines of text (leading). Unitless values (e.g., `line-height: 1.5;`) are preferred because they scale proportionally with `font-size`.
+- **`text-align`:** Aligns text within its container (`left`, `right`, `center`, `justify`).
+- **`text-decoration`:** Adds or removes text decorations (`underline`, `line-through`, `none` — commonly used to remove default hyperlink underlines).
+- **`letter-spacing`:** Adjusts the tracking (space between individual characters).
+- **`word-spacing`:** Adjusts the space between whole words.
+- **`text-transform`:** Manages capitalization dynamically without altering HTML source (`uppercase`, `lowercase`, `capitalize`).
+
+---
+*Source: [Shay Howe — Learn to Code HTML & CSS (Lesson 6)](https://learn.shayhowe.com/html-css/working-with-typography/)*
+
+
+
 
 
 # Anki Flashcards created from this class:
@@ -256,3 +279,17 @@ The element must have an explicity defined width (otherwise it occupies 100% wid
 4. **Front:** What is a "Clearfix" in CSS?
    **Back:** A CSS technique (often using a `::after` pseudo-element with `clear: both;`) applied to a parent element so it dynamically expands to contain its floated children.
 
+5. What is a "font stack" in CSS and why is it used?
+A prioritized list of fallback font families declared in front-family (ending in a generic family like sans-serif) so the browser has backups if a primary font is not installed on the user's system.
+
+6. Why is using untless value for line-height (ex. line-height: 1.5;) considered best practice?
+Unitless values act as proportional multiplieris that automatically scale based on the element's (or its children's) font-size, preventing overlapping text when font sizes change.
+
+7. What is the difference beteen letter-spacing and word-spacing in CSS?
+Letter-spacing controls the spacing between individual characters (tracking), while word-spacing controls the space between words.
+
+8. What CSS property is used to remove the default underline from HTML hyperlinks (tags)?
+text-decoration: none;
+
+9. What does text-transform: capitalize; do to text?
+It transforms the first character of each word to uppercase without altering the underlying HTML text. 
