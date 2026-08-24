@@ -91,6 +91,28 @@ Source: Shay Howe — Learn to Code HTML & CSS (Lesson 1)
 *Source: [Shay Howe — Learn to Code HTML & CSS (Lesson 3)](https://learn.shayhowe.com/html-css/getting-to-know-css/)*
 
 
+## 📖 Shay Howe: Lesson 4 Notes — Opening the Box Model
+
+### The Box Model Anatomy
+Every element on a web page is rendered as a rectangular box consisting of four distinct layers (from inside out):
+1. **Content:** The core text, image, or media. Dimensions set by `width` and `height`.
+2. **Padding:** Transparent spacing clearing the area around the content, inside the border. Inherits element background.
+3. **Border:** Wraps around the padding and content (`border: 1px solid black;`).
+4. **Margin:** Transparent spacing clearing an area outside the border, separating the element from neighbors.
+
+### Box Sizing: `content-box` vs. `border-box`
+- **Default (`box-sizing: content-box`):** `width` and `height` only apply to the content. Adding padding or borders increases the total rendered size of the element on screen:
+  - *Total Rendered Width* = `width` + `padding-left` + `padding-right` + `border-left` + `border-right` + `margin-left` + `margin-right`
+- **Modern Standard (`box-sizing: border-box`):** `width` and `height` encompass content, padding, and borders. Padding and borders are absorbed inward, keeping the declared box dimensions exact:
+  - *Total Rendered Width* = `width` + `margin-left` + `margin-right`
+
+### Margin & Padding Shorthand
+- **4 Values:** `margin: 10px 20px 15px 5px;` (Top, Right, Bottom, Left — Clockwise)
+- **2 Values:** `margin: 10px 20px;` (Top/Bottom, Left/Right)
+- **Margin Auto:** `margin: 0 auto;` horizontally centers a block-level element with a declared width.
+
+---
+*Source: [Shay Howe — Learn to Code HTML & CSS (Lesson 4)](https://learn.shayhowe.com/html-css/opening-the-box-model/)*
 
 
 
@@ -175,3 +197,18 @@ Back: Type/element selectors -> class/attribute selectors -> ID selectors -> Inl
 
 3. Front: In CSS, what is the difference between em and rem relative units?
 Back: em is relative to the font-size of its direct parent element, while rem (root em) is relative to the font-size of the root element. 
+
+4. Name the four layers of the CSS Box Model from innermost to outermost?
+Content-> Padding->Border->Margin.
+
+5. What is the difference between CSS Padding and CSS Margin?
+Padding creates space inside the border (surrouding the content and showing the background color), while Margin creates empty space outside the border (pushing other elements away).
+
+6. How does box-sizing: border-box change standard CSS width calculation compared to box-sizing: content box?
+In border-box, declared width includes padding and borders (they push inward), whereas defalut content-box adds padding and borders onto the declared width, expanding the total size.
+
+7. How does the four-value CSS shorthand poprerty apply values (e.g., padding: 10px 20px 15px 5px;)?
+It applies clockwise: top, right, bottom, left (TRBL/"Trouble").
+
+8. What is required to horizontally center a block-level element using margin: 0 auto;?
+The element must have an explicity defined width (otherwise it occupies 100% width and cannot center). 
