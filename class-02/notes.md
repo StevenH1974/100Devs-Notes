@@ -115,6 +115,32 @@ Every element on a web page is rendered as a rectangular box consisting of four 
 *Source: [Shay Howe — Learn to Code HTML & CSS (Lesson 4)](https://learn.shayhowe.com/html-css/opening-the-box-model/)*
 
 
+## 📖 Shay Howe: Lesson 5 Notes — Positioning Content
+
+### Floating Elements (`float`)
+- **Purpose:** Originally designed to wrap text around images, `float` became the primary early layout tool to place block-level elements side-by-side horizontally.
+- **Values:** `float: left;` or `float: right;`.
+- **Behavior:** Removes an element from the normal document flow and shifts it to the left or right of its parent container until it touches the container edge or another floated element.
+
+### Multi-Column Layouts with Floats
+- To create 2-column or 3-column layouts, assign explicit percentage or pixel widths to each column and apply `float: left;` to all columns.
+- Ensure total column widths, padding, margins, and borders do not exceed 100% of the parent width (or elements will wrap to the next line). Use `box-sizing: border-box;` to prevent width calculation overflows.
+
+### Containing Floats & Collapsing Parents (The "Clearfix")
+- **The Problem (Parent Collapse):** When all child elements inside a container are floated, they are removed from the normal flow, causing the parent container's height to collapse to `0px`.
+- **Clearing Floats (`clear` property):**
+  - Values: `clear: left;`, `clear: right;`, `clear: both;`.
+  - Applied to an element placed *after* floated elements to prevent content from wrapping around them and push it below.
+- **Modern Clearfix Technique:** Applying a pseudo-element rule to the parent container so it expands to encompass its floated children automatically:
+```css
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
 
 # Anki Flashcards created from this class:
 
@@ -212,3 +238,21 @@ It applies clockwise: top, right, bottom, left (TRBL/"Trouble").
 
 8. What is required to horizontally center a block-level element using margin: 0 auto;?
 The element must have an explicity defined width (otherwise it occupies 100% width and cannot center). 
+
+
+***
+
+### 2.  CSS Anki Flashcards
+
+1. **Front:** What happens to an element when you apply `float: left` or `float: right` to it?
+   **Back:** It is taken out of normal document flow and pushed to the far left or right of its parent container, allowing text and inline elements to wrap around it.
+
+2. **Front:** Why does a parent container's height collapse to 0 when all of its child elements are floated?
+   **Back:** Floated elements are removed from normal document flow, so the parent container cannot calculate their height and collapses unless floats are cleared or contained.
+
+3. **Front:** What does the CSS property `clear: both;` do?
+   **Back:** It forces an element to move down below any preceding floated elements on both the left and right, rather than wrapping alongside them.
+
+4. **Front:** What is a "Clearfix" in CSS?
+   **Back:** A CSS technique (often using a `::after` pseudo-element with `clear: both;`) applied to a parent element so it dynamically expands to contain its floated children.
+
