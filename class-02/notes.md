@@ -162,7 +162,28 @@ Every element on a web page is rendered as a rectangular box consisting of four 
 *Source: [Shay Howe — Learn to Code HTML & CSS (Lesson 6)](https://learn.shayhowe.com/html-css/working-with-typography/)*
 
 
+## 📖 Shay Howe: Lesson 7 Notes — Setting Backgrounds & Gradients
 
+### Background Colors & Images
+- **`background-color`:** Sets a solid background color using keywords, Hex, RGB, HSL, or RGBA/HSLA (for opacity/transparency via alpha channel).
+- **`background-image`:** Applies an image using the `url()` functional notation:
+  ```css
+  background-image: url("images/pattern.png");
+
+
+	Image Controls:
+⚬	background-repeat: Controls tiling (no-repeat, repeat-x, repeat-y, repeat).
+⚬	background-position: Sets placement (top left, center, 50% 50%, 10px 20px).
+⚬	background-size: Adjusts scaling (auto, cover, contain, explicit dimensions).
+⚬	Multiple Background Images: Layer multiple images by separating declarations with commas (the first listed image sits closest to the viewer on top).
+Gradient Backgrounds
+⚬	Nature of Gradients: Gradients are treated as images in CSS and are declared using the background-image property.
+⚬	Linear Gradients (linear-gradient()):
+⚬	Syntax: background-image: linear-gradient(direction, color-stop-1, color-stop-2, ...);
+⚬	Directions: Keywords (to right, to bottom right) or angles (90deg, 180deg).
+⚬	Color Stops: Define where colors transition along the gradient line (e.g., linear-gradient(to right, red 20%, blue 80%)).
+⚬	Radial Gradients (radial-gradient()): Transition colors outward from a central point.
+* Source: Shay Howe — Learn to Code HTML & CSS (Lesson 7)
 
 
 # Anki Flashcards created from this class:
@@ -293,3 +314,22 @@ text-decoration: none;
 
 9. What does text-transform: capitalize; do to text?
 It transforms the first character of each word to uppercase without altering the underlying HTML text. 
+
+
+***
+
+### 2. High-Yield CSS Anki Flashcards
+
+1. **Front:** In CSS, which property is used to apply a linear gradient, and why?
+   **Back:** The `background-image` (or shorthand `background`) property, because CSS gradients are programmatically generated and treated as image assets by the browser engine.
+
+2. **Front:** In the CSS `linear-gradient()` function, what is the default direction if none is explicitly declared?
+   **Back:** From top to bottom (`to bottom` or `180deg`).
+
+3. **Front:** What is the difference between `background-size: cover` and `background-size: contain`?
+   **Back:** `cover` scales the image to completely fill the entire container (some cropping may occur), while `contain` scales the image to fit entirely inside the container without any cropping.
+
+4. **Front:** When declaring multiple background images in CSS, which image is rendered in the front layer?
+   **Back:** The first image listed in the comma-separated declaration renders on top (closest to the viewer).
+
+***
