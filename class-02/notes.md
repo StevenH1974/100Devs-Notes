@@ -185,6 +185,31 @@ Gradient Backgrounds
 ⚬	Radial Gradients (radial-gradient()): Transition colors outward from a central point.
 * Source: Shay Howe — Learn to Code HTML & CSS (Lesson 7)
 
+## 📖 Shay Howe: Lesson 8 Notes — Creating Lists
+
+### HTML List Types & Attributes
+- **Unordered Lists (`<ul>`):** For collections where order does not matter (renders bullet points by default).
+- **Ordered Lists (`<ol>`):** For sequential collections (renders numbers by default).
+  - `reversed`: Boolean attribute that reverses the numbering count from highest to lowest.
+  - `start`: Sets the starting integer for the list (e.g., `start="5"`).
+  - `value`: Attribute placed directly on an individual `<li>` to manually override its specific numeric position.
+- **Description Lists (`<dl>`):** Used for key/value pairs, glossaries, or metadata pairings:
+  - `<dt>`: Description Term (the name/concept).
+  - `<dd>`: Description Details (the definition or value).
+
+### Nested Lists
+- Lists placed inside another list must be nested **inside** an `<li>` element, not directly inside the parent `<ul>` or `<ol>`.
+
+### CSS List Styling
+- **`list-style-type`:** Controls marker type (`disc`, `circle`, `square`, `decimal`, `none` — commonly used to reset navigation menus).
+- **`list-style-position`:** Places markers `inside` or `outside` the list item content flow.
+- **`list-style-image`:** Replaces standard bullets with custom image assets using `url()`.
+- **Horizontal Lists for Navigation:** Setting `display: inline;` or `display: inline-block;` (or Flexbox) on `<li>` elements to convert vertical lists into horizontal navbars.
+
+---
+*Source: [Shay Howe — Learn to Code HTML & CSS (Lesson 8)](https://learn.shayhowe.com/html-css/creating-lists/)*
+
+
 
 # Anki Flashcards created from this class:
 
@@ -333,3 +358,15 @@ It transforms the first character of each word to uppercase without altering the
    **Back:** The first image listed in the comma-separated declaration renders on top (closest to the viewer).
 
 ***
+
+1. What are the 3 core elements that make up an HTML Description List?
+Description wrapper, Description Term, Description Details
+
+What does the reversed attribute do on an element?
+It reverses the numbering of the ordered list items so they count downward instead of upward.
+
+What is the correct HTML syntax rule when nesting a sub-list inside a parent list? 
+The sub list must be nested directly inside an individual element of the parent list.
+
+What CSS declarion is used on list to completely remove default bullet points or numbering?
+list-style-type: none; (or shorthand list-style: none;)
