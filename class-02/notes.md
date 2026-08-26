@@ -211,6 +211,53 @@ Gradient Backgrounds
 
 
 
+## 📖 Shay Howe: Lesson 9 Notes — Adding Media
+
+### Images (`<img>`)
+- Replaced inline element requiring `src` and accessible `alt` attributes.
+- Native sizing via `width` and `height` attributes helps prevent layout shifts while the page loads.
+
+### Audio & Video (`<audio>` & `<video>`)
+- Native HTML5 multimedia containers using `src` or nested `<source>` tags for multi-format fallback (e.g., MP4, WebM).
+- **Core Attributes:**
+  - `controls`: Displays native play/pause/volume browser controls.
+  - `autoplay`: Starts media automatically (often requires `muted` to work in modern browsers).
+  - `loop`: Plays media continuously in a loop.
+  - `poster` (video only): Specifies an image placeholder shown before the video plays.
+
+### Figures & Captions
+- `<figure>`: Encapsulates media (images, diagrams, code snippets) referenced in the main text.
+- `<figcaption>`: Provides a semantic caption directly associated with the parent `<figure>`.
+
+---
+
+## 📖 Shay Howe: Lesson 10 Notes — Building Forms
+
+### Form Basics & Submission
+- `<form action="url" method="GET|POST">`: The wrapper for data collection.
+  - `action`: Destination endpoint where data is sent.
+  - `method`: HTTP transfer protocol (`GET` appends parameters to URL; `POST` sends payload in request body).
+
+### Essential Input Controls & Elements
+- `<input>`: Self-closing element controlled via the `type` attribute (`text`, `email`, `password`, `number`, `checkbox`, `radio`, `submit`, `hidden`).
+- `<label for="id">`: Associates descriptive text with an input via matching `id` for accessibility and hit-area expansion.
+- `<textarea>`: Multi-line text input (requires closing tag `</textarea>`).
+- `<select>` & `<option>`: Dropdown menus.
+- `<fieldset>` & `<legend>`: Groups related form controls and provides a caption.
+
+### Essential Form Attributes
+- `name`: Key sent in the form submission key-value pair (e.g., `name="username"` $\rightarrow$ `username=Steven`).
+- `value`: Initial default content or specific submitted value.
+- `placeholder`: Brief temporary hint displayed when input is empty.
+- `required`: Prevents submission if the field is empty.
+- `disabled`: Prevents interaction and excludes the field from form submission.
+
+---
+*Source: [Shay Howe — Learn to Code HTML & CSS (Lessons 9 & 10)](https://learn.shayhowe.com/html-css/)*
+
+
+
+
 # Anki Flashcards created from this class:
 
 Front: What is the main structural difference between `<div>` and `<span>`?
@@ -360,13 +407,25 @@ It transforms the first character of each word to uppercase without altering the
 ***
 
 1. What are the 3 core elements that make up an HTML Description List?
-Description wrapper, Description Term, Description Details
+Description list wrapper <dl>, Description Term <dt>, Description Details <dd>
 
-What does the reversed attribute do on an element?
+What does the reversed attribute do on an <ol> element?
 It reverses the numbering of the ordered list items so they count downward instead of upward.
 
 What is the correct HTML syntax rule when nesting a sub-list inside a parent list? 
-The sub list must be nested directly inside an individual element of the parent list.
+The sub list (<ul> or <ol>) must be nested directly inside an individual <li> element of the parent list.
 
 What CSS declarion is used on list to completely remove default bullet points or numbering?
 list-style-type: none; (or shorthand list-style: none;)
+
+Why is it best practice to use nested <source> tags inside <video> instead of a single src attribute?
+It allows developers to provide multiple video formats. The broswer scans top to bottom and plays the first format its engine supports.
+
+What is the semantic difference between wrapping an image in <figure> with <figcaption> versus a standard <p> tag?
+  <figure> semantically isolates self-contained media referenced in the text, and <figcaption> explicitly associated the descriptive text with that exact media asset for screen readers and search engines.
+
+    What is the primary difference between mothin="GET" and metho ="POST" in an HTML form?
+    GET appends form data directly to the URL query string, while POST transmits the data inside the HTTP request body. 
+
+    Why must an HTML <input> element have a name attribute?
+    The name attribute acts as the key in the key-value pair sent to the servier when the form is submitted. Without name, the inputs value is ignored. 
