@@ -256,6 +256,33 @@ Gradient Backgrounds
 *Source: [Shay Howe — Learn to Code HTML & CSS (Lessons 9 & 10)](https://learn.shayhowe.com/html-css/)*
 
 
+## 📖 Shay Howe: Lesson 11 Notes — Making Tables
+
+### Semantic Table Structure
+- `<table>`: The wrapper container for all tabular data.
+- `<thead>`, `<tbody>`, `<tfoot>`: Structural semantic wrappers separating the table header, body data, and footer summaries.
+- `<tr>`: Table row.
+- `<th>`: Table header cell (bold/centered by default; screen-reader accessible via `scope="col"` or `scope="row"`).
+- `<td>`: Table data cell.
+
+### Advanced Table Attributes & CSS
+- `colspan`: Expands a cell across multiple columns horizontally.
+- `rowspan`: Expands a cell across multiple rows vertically.
+- `border-collapse: collapse;`: Merges adjacent cell borders into a clean single line instead of standard double borders.
+
+---
+
+## 📖 Shay Howe: Lesson 12 Notes — Writing Best Practice Code
+
+### Architecture & Maintainability
+- **HTML Standards:** Use semantic tags, enforce lowercase tag/attribute names, self-close void elements cleanly, and write accessible `alt` tags.
+- **CSS Standards:** Organize stylesheets logically (Reset/Normalize $\rightarrow$ Typography $\rightarrow$ Layout $\rightarrow$ Components), use meaningful class names over rigid IDs, and minimize selector specificity.
+- **Code Comments:** Use `<!-- HTML comments -->` and `/* CSS comments */` to demarcate major layout sections.
+
+---
+*Source: [Shay Howe — Learn to Code HTML & CSS (Lessons 11 & 12)](https://learn.shayhowe.com/html-css/)*
+
+
 
 
 # Anki Flashcards created from this class:
@@ -424,8 +451,20 @@ It allows developers to provide multiple video formats. The broswer scans top to
 What is the semantic difference between wrapping an image in <figure> with <figcaption> versus a standard <p> tag?
   <figure> semantically isolates self-contained media referenced in the text, and <figcaption> explicitly associated the descriptive text with that exact media asset for screen readers and search engines.
 
-    What is the primary difference between mothin="GET" and metho ="POST" in an HTML form?
+    What is the primary difference between method="GET" and method ="POST" in an HTML form?
     GET appends form data directly to the URL query string, while POST transmits the data inside the HTTP request body. 
 
     Why must an HTML <input> element have a name attribute?
-    The name attribute acts as the key in the key-value pair sent to the servier when the form is submitted. Without name, the inputs value is ignored. 
+    The name attribute acts as the key in the key-value pair sent to the server when the form is submitted. Without name, the inputs value is ignored. 
+
+    In an HTML table, what is the purpose of the colspan and rowspan attributes?
+    colspan spans a single cell across multiple horizontal columns, while rowspan spans a cell across multiple vertical rows.
+
+    What CSS property removes the defalut space between table cell borders and merges them into a single line?
+    border-collapse; collapse;
+
+    What is the semantic role of <thead>, <tbody> and <tfoot> in HTML tables?
+      They group table roqs in logical secions (header labels, body data, and summary caluclations/footers), improving accessibility and multi-page print rendering. 
+
+      
+
